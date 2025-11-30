@@ -1,0 +1,34 @@
+name: Job Daily Agent
+
+on:
+  schedule:
+    # GitHub Actions 用的是 UTC 时间
+    # 上海 21:00 = UTC 13:00
+    - cron: "0 13 * * *"
+  workflow_dispatch: {}  # 手动触发也方便调试
+
+jobs:
+  run-daily-job:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        run: |
+          pip install --upgrade pip
+          pip install -r requirements.txt
+
+      - name: Run Coze Job Workflow
+        env:
+          COZE_TOKEN: ${{ secrets.COZE_TOKEN }}
+          WORKFLOW_ID: ${{ secrets.WORKFLOW_ID }}
+          COZE_API_BASE: ${{ secrets.COZE_API_BASE }} # 如果不用可以不设置
+        run: |
+          python run_workflow.py
