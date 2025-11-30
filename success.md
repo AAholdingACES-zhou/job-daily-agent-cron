@@ -1,1 +1,1 @@
-
+[![Job Daily Agent](https://github.com/AAholdingACES-zhou/job-daily-agent-cron/actions/workflows/job_daily_agent.yml/badge.svg)](https://github.com/AAholdingACES-zhou/job-daily-agent-cron/actions/workflows/job_daily_agent.yml)
