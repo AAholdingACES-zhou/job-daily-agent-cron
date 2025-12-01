@@ -36,7 +36,7 @@ Job Daily Agent 是一个全自动求职助手，会在每天固定时间：
   - 使用 `cron` 表达式实现每天定时调用 Coze Workflow
   - Action 日志与运行状态通过徽章展示
 
-- ## Workflow图示
+### Workflow图示
   
 ![Job_Daily_Agent (1)](https://github.com/user-attachments/assets/c407e8d9-83d1-4235-9a75-824caae3bf58)
 
@@ -61,7 +61,7 @@ job_daily_agent/
 
 ---
 
-## 邮件输出结果（Sample：2025-12-01手动触发）
+### 邮件输出结果（Sample：2025-12-01手动触发）
 
 <img width="842" height="372" alt="image" src="https://github.com/user-attachments/assets/307d3500-339c-4483-b1f0-12c712f7192b" />
 
