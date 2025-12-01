@@ -1,9 +1,10 @@
 ## 🚀 Job Daily Agent  
 **自动化求职岗位筛选系统（All-in-One Job Application Assistant）**
 
-> 自动把今日推送到邮箱的招聘平台邮件筛选后
-> 打分 + 增加简历修改建议，
-> 生成岗位推荐邮件 + 每日9 p.m. 发送至邮箱。
+> 自动筛选今日推送到邮箱的招聘平台邮件→
+> 打分 + 增加简历修改建议→
+> 生成岗位推荐邮件→
+> 每日晚九点发送至邮箱
 
 🔗 **项目仓库**：`https://github.com/AAholdingACES-zhou/job-daily-agent-cron`  
 🔗 **Workflow**：`https://www.coze.cn/work_flow?workflow_id=7578184743356874761&space_id=7578173564516696110`
@@ -37,23 +38,26 @@ Job Daily Agent 是一个全自动求职助手，会在每天固定时间：
 
 ### 📈 系统结构
 ```
-Job Daily Agent/
-│
-├── workflows/
-│   └── job_daily_agent_main.json       # Coze Workflow 工作流
+job_daily_agent/
 │
 ├── .github/
 │   └── workflows/
-│       └── cron.yml                    # GitHub Actions 定时任务
+│       └── job_daily_agent.yml         # GitHub Actions 定时任务（每天 21:00 自动运行）
 │
-└── Overview_workflow.md
+├── Overview_workflow.md                # 项目说明与 Workflow 结构文档
+│
+├── run_workflow.py                     # 触发 Coze Workflow 的 Python 调用脚本
+│
+└── requirements.txt                    # 依赖 cozepy
+
 
 ```
 
 ---
 
-## Workflow展示
+## Workflow
 
+![Job_Daily_Agent (1)](https://github.com/user-attachments/assets/c407e8d9-83d1-4235-9a75-824caae3bf58)
 
 ---
 
