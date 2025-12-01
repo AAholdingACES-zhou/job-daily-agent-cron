@@ -8,6 +8,8 @@
 🔗 **项目仓库**：`https://github.com/AAholdingACES-zhou/job-daily-agent-cron`  
 🔗 **Workflow**：`https://www.coze.cn/work_flow?workflow_id=7578184743356874761&space_id=7578173564516696110`
 
+---
+
 ### ⭐ 项目简介  
 
 Job Daily Agent 是一个全自动求职助手，会在每天固定时间：
@@ -31,8 +33,33 @@ Job Daily Agent 是一个全自动求职助手，会在每天固定时间：
   - 使用 `cron` 表达式实现每天定时调用 Coze Workflow
   - Action 日志与运行状态通过徽章展示
 
-### 📈 流程图
+---
+
+### 📈 系统结构
+```
+Job Daily Agent/
+│
+├── workflows/
+│   └── job_daily_agent_main.json       # Coze Workflow 工作流
+│
+├── .github/
+│   └── workflows/
+│       └── cron.yml                    # GitHub Actions 定时任务
+│
+└── Overview_workflow.md
+
+```
+
+---
+
+## Workflow展示
 
 
-- `docs/job_daily_agent_flow_chart.png`
-- `docs/email_to_report_pipeline.png`
+---
+
+## 邮件输出结果（Sample-12-01手动触发）
+
+<img width="842" height="372" alt="image" src="https://github.com/user-attachments/assets/307d3500-339c-4483-b1f0-12c712f7192b" />
+
+<img width="1105" height="744" alt="image" src="https://github.com/user-attachments/assets/5a187894-9853-4e26-b410-4aead7572f74" />
+
